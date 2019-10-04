@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "YaroslavKormushyn 9/24/2019 17:39",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value"
+	],
+	"name" : "LinkType",
+	"type" : "normal"
+}

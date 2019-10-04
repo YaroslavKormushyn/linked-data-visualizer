@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"command",
+		"commandBlock",
+		"control",
+		"instance",
+		"linkType",
+		"when",
+		"operControls",
+		"varControls"
+	],
+	"name" : "LinkMessageConfig",
+	"type" : "normal"
+}

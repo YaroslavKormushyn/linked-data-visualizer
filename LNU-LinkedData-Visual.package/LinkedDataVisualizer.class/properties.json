@@ -1,0 +1,27 @@
+{
+	"commentStamp" : "YaroslavKormushyn 9/23/2019 12:03",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"gap",
+		"elementSize",
+		"colors",
+		"shapes",
+		"operation",
+		"operands",
+		"process",
+		"operationBlock",
+		"composer",
+		"namedGroups",
+		"backgroundGroups",
+		"metaLinks",
+		"delay",
+		"semaphore",
+		"linkMessageConfigs"
+	],
+	"name" : "LinkedDataVisualizer",
+	"type" : "normal"
+}
