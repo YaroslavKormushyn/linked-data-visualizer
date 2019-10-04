@@ -1,4 +1,4 @@
-as yet unclassified
+generate - shapes
 getDefaultHeaderElementShape
 | box valueLabel indexLabel |
 	box := RTBox new

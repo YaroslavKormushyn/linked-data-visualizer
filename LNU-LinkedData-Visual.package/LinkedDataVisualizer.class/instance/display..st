@@ -1,8 +1,8 @@
 accessing
 display: linkedStructure
 	| nodes elements |
-	linkedStructure isNil 
-	ifTrue: [ ^self ].
+	linkedStructure isNil
+		ifTrue: [ ^ self ].
 	(linkedStructure respondsTo: #viewElements)
 		ifFalse: [ ^ Error
 				signal: 'Container should expose ' , #viewElements asByteString ].
@@ -14,4 +14,5 @@ display: linkedStructure
 	composer view addAll: elements.
 	RTGridLayout on: elements.
 	self drawEdgesWith: elements.
-	self setPositionsFor: elements
+	self setPositionsFor: elements.
+	^ composer view

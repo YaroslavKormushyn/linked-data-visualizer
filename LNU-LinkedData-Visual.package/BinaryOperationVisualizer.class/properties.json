@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LinkedDataOperationVizualizer",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BinaryOperationVisualizer",
+	"type" : "normal"
+}

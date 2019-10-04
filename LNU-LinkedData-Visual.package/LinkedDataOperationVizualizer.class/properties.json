@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"composer",
+		"operation",
+		"operands",
+		"process",
+		"operationBlock",
+		"namedGroups",
+		"backgroundGroups",
+		"metaLinks",
+		"delay",
+		"semaphore",
+		"linkMessageConfigs"
+	],
+	"name" : "LinkedDataOperationVizualizer",
+	"type" : "normal"
+}

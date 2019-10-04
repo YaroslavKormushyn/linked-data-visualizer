@@ -10,17 +10,8 @@
 		"elementSize",
 		"colors",
 		"shapes",
-		"operation",
-		"operands",
-		"process",
-		"operationBlock",
 		"composer",
-		"namedGroups",
-		"backgroundGroups",
-		"metaLinks",
-		"delay",
-		"semaphore",
-		"linkMessageConfigs"
+		"linkMessages"
 	],
 	"name" : "LinkedDataVisualizer",
 	"type" : "normal"

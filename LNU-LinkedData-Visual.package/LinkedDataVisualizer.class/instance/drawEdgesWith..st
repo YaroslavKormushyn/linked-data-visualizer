@@ -1,10 +1,10 @@
 private
 drawEdgesWith: elements
-	|edgeBuilder|
-	edgeBuilder := shapes at: #edgeBuilder.
+	| edgeBuilder |
+	edgeBuilder := self getEdgeBuilder.
 	edgeBuilder elements: elements.
 	edgeBuilder
-		connectTo: [ :el | 
-			linkMessages collect: [ :msg | el perform: msg asSymbol ]
-			thenReject: [ :res | res isNil ]
-			 ].
+		connectToAll: [ :el | 
+			linkMessages
+				collect: [ :msg | el perform: msg asSymbol ]
+				thenReject: [ :res | res isNil ] ]

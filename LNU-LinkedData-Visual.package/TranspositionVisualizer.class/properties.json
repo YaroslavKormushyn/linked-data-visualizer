@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "UnaryOperationVisualizer",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TranspositionVisualizer",
+	"type" : "normal"
+}

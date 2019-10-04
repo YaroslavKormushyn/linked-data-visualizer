@@ -1,4 +1,4 @@
-as yet unclassified
+generate - shapes
 getEdgeBuilder
 	| edgeBuilder |
 	edgeBuilder := RTEdgeBuilder new.
