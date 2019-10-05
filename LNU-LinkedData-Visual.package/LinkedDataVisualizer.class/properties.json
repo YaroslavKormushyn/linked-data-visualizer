@@ -10,7 +10,7 @@
 		"elementSize",
 		"colors",
 		"shapes",
-		"composer",
+		"view",
 		"linkMessages"
 	],
 	"name" : "LinkedDataVisualizer",

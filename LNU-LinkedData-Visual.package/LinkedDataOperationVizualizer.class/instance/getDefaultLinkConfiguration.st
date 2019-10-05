@@ -1,0 +1,3 @@
+as yet unclassified
+getDefaultLinkConfiguration
+	self subclassResponsibility 

@@ -1,0 +1,3 @@
+as yet unclassified
+objectType
+self subclassResponsibility 

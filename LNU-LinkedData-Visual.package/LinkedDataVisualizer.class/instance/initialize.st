@@ -14,7 +14,6 @@ initialize
 			{(#data -> self getDefaultDataElementShape).
 			(#header -> self getDefaultHeaderElementShape).
 			(#edgeBuilder -> self getDefaultEdgeShapeBuilder)}.
-	linkMessages := #(#next #previous).
-	composer := RTComposer new.
-	composer view: composer view @ RTZoomableView.
-	composer gap: gap
+	linkMessages := #(#next #previous) asSet.
+	view := RTView new.
+	view @ RTZoomableView

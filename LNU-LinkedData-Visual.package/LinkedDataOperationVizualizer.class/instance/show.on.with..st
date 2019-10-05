@@ -1,8 +1,8 @@
 as yet unclassified
-show: operator on: operand
-	operands := Dictionary newFrom: {(#left -> operand)}.
+show: operator on: leftOperand with: rightOperand
+	operands := Dictionary newFrom: {(#left -> leftOperand) . (#right -> rightOperand)}.
 	operation := operator.
-	operationBlock := [ [ operand perform: operator asSymbol ]
+	operationBlock := [ [ leftOperand perform: operator asSymbol with: rightOperand ]
 		ensure: [ self unlink ] ].
 	process := operationBlock newProcess.
 	[ self setLinks.

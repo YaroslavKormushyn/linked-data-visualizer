@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LinkedDataVisualizer",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SparseMatrixVisualizer",
+	"type" : "normal"
+}
