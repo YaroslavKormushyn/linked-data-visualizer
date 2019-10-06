@@ -1,6 +1,5 @@
 accessing
 display: linkedStructure
-	self shouldBeImplemented.
 	linkedStructure isNil
 		ifTrue: [ ^ self ].
 	^ self allSubclasses

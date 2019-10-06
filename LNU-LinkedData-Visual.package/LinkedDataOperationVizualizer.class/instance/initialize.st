@@ -7,6 +7,7 @@ initialize
 	semaphore := Semaphore new.
 	namedGroups := {}.
 	backgroundGroups := {}.
+	composer := RTComposer new.
 	metaLinks := OrderedCollection new.
 	delay := Delay new.
 	semaphore := Semaphore new

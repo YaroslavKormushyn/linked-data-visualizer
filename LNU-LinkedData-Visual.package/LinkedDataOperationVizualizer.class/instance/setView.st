@@ -1,6 +1,6 @@
 initialization
 setView
-operands keysAndValuesDo: [ :key :value |
-	self display: value.
-	composer group: key.
-	 ].
+	operands
+		keysAndValuesDo: [ :key :value | 
+			(dataVisualizers at: key) on: value.
+			composer group: key ]
