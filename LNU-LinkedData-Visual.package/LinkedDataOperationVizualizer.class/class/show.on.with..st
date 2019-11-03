@@ -1,5 +1,5 @@
 as yet unclassified
 show: operator on: leftOperand with: rightOperand
-	^ BinaryOperationVisualizer allSubclasses
+	^ BinaryOperationVisualizer subclasses
 		detect: [ :cl | cl canVisualize: operator ]
-		ifFound: [ :cl | cl new show: operator on: leftOperand with: rightOperand  ]
+		ifFound: [ :cl | cl show: operator on: leftOperand with: rightOperand ]

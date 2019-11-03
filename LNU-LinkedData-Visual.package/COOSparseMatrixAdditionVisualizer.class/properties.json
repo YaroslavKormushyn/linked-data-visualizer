@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AdditionVisualizer",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "COOSparseMatrixAdditionVisualizer",
+	"type" : "normal"
+}

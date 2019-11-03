@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"command",
+		"commandBlock",
+		"control",
+		"instance",
+		"when",
+		"operControls",
+		"varControls",
+		"metaObjectSelector",
+		"metaObjectArguments"
+	],
+	"name" : "LinkConfig",
+	"type" : "normal"
+}

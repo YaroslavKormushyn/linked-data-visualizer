@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "LinkConfig",
+	"category" : "LNU-LinkedData-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodName"
+	],
+	"name" : "MethodLinkConfig",
+	"type" : "normal"
+}
