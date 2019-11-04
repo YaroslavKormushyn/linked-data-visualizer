@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MethodLinkConfig",
-	"category" : "LNU-LinkedData-Visual-Core",
+	"category" : "LNU-LinkedData-Visual-Config",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"leftMarkerElement",
+		"rightMarkerElement",
+		"leftMatrixMarker",
+		"rightMatrixMarker"
+	],
 	"name" : "COOSparseMatrixAdditionVisualizer",
 	"type" : "normal"
 }

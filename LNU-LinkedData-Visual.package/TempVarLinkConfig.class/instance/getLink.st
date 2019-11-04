@@ -1,15 +1,12 @@
 as yet unclassified
 getLink
-	| metaLink |
-	metaLink := MetaLink new.
-	metaLink selector: metaObjectSelector.
-	metaLink arguments: metaObjectArguments.
-	metaLink control: control.
-	instance
+	| link  |
+	link := super getLink.
+		instance
 		perform: self metaLinkMessage
 		withArguments:
-			{metaLink.
+			{link.
 			tempVarName.
-			methodName .
+			methodName.
 			when}.
-	^ metaLink
+	^ link

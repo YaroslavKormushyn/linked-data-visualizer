@@ -1,20 +1,20 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "LNU-LinkedData-Visual-Core",
+	"category" : "LNU-LinkedData-Visual-Config",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"command",
-		"commandBlock",
+		"block",
 		"control",
 		"instance",
 		"when",
+		"selector",
+		"arguments",
+		"linkOptionsConfigBlocks",
 		"operControls",
-		"varControls",
-		"metaObjectSelector",
-		"metaObjectArguments"
+		"varControls"
 	],
 	"name" : "LinkConfig",
 	"type" : "normal"
