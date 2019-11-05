@@ -1,5 +1,3 @@
-Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
-
 I represent a base class for metalinking configurations used in LinkedDataVisualizer.
 
 I can generate metalinks based on the stored configuration, which are already linked.
@@ -28,3 +26,10 @@ Internal Representation and Key Implementation Points.
 
 
     Implementation Points
+	arguments -> for block
+	block -> should accept the set number of arguments, e.g. one arg if selfValue was called
+	control -> could be any of operControls
+	instance -> to which the link links
+	linkOptionsConfigBlocks -> blocks which accept the link as an argument and change its options
+	selector -> message which is sent to block
+	when -> any of varControls

@@ -11,9 +11,7 @@ getDefaultOperandsLinkConfiguration
 		instance: (operands at: #left)
 		methodName: method
 		tempVarName: #leftMatrixMarker
-		when: #write
-		selector: #value:
-		arguments: #(value)) getLink.
+		when: #write) selfValue; getLink.
 	(TempVarLinkConfig
 		block: [ :element | 
 			| leftMarkerHighlightLink |
@@ -27,11 +25,10 @@ getDefaultOperandsLinkConfiguration
 							Transcript
 								show: 'highlight left ' , (element row @ element column) asString;
 								cr.
-							delay copy wait.
-							self removeLink: leftMarkerHighlightLink ]
+							delay copy wait]
 						control: #after
 						instance: element
-						methodName: #copy) getLink.
+						methodName: #copy) oneShot; getLink.
 					self addLink: leftMarkerHighlightLink ].
 			"draw the marker element on the view if its the initialization"
 			leftMarkerElement
@@ -49,9 +46,7 @@ getDefaultOperandsLinkConfiguration
 		instance: (operands at: #left)
 		methodName: method
 		tempVarName: #leftMatrixMarker
-		when: #write
-		selector: #value:
-		arguments: #(value)) getLink.
+		when: #write) selfValue; getLink.
 	(TempVarLinkConfig
 		block: [ :value | 
 			"remove selection from previous marker element"
@@ -61,9 +56,7 @@ getDefaultOperandsLinkConfiguration
 		instance: (operands at: #left)
 		methodName: method
 		tempVarName: #rightMatrixMarker
-		when: #write
-		selector: #value:
-		arguments: #(value)) getLink.
+		when: #write) selfValue; getLink.
 	(TempVarLinkConfig
 		block: [ :element | 
 			| rightMarkerHighlightLink |
@@ -76,9 +69,7 @@ getDefaultOperandsLinkConfiguration
 							"elementCopy is the copied object which we use to set a link to value:"
 							"with that we know if it's selecting left and right markers or only one of them"
 							| leftMatrixMarkerHightlightLink |
-							leftMatrixMarkerHightlightLink := MetaLink new.
-							leftMatrixMarkerHightlightLink
-								metaObject: [ "the link is set to right only according to the method code"
+							leftMatrixMarkerHightlightLink := (MethodLinkConfig block: [ "the link is set to right only according to the method code"
 									"left is never the object which is copied in this situation"
 									composer highlightModel: leftMatrixMarker inGroup: #left.
 									Transcript
@@ -87,31 +78,23 @@ getDefaultOperandsLinkConfiguration
 												, (leftMatrixMarker row @ leftMatrixMarker column) asString;
 										cr.
 									delay copy wait
-									"leftMatrixMarkerHightlightLink uninstall" ].
-							leftMatrixMarkerHightlightLink selector: #value.
-							leftMatrixMarkerHightlightLink control: #after.
-							elementCopy
-								link: leftMatrixMarkerHightlightLink
-								toMethodNamed: #value:.
+									"leftMatrixMarkerHightlightLink uninstall" ]
+								control: #after instance: elementCopy methodName: #value:) getLink.
 							"highlight the right marker and uninstall itself after first use"
 							composer highlightModel: element inGroup: #right.
 							Transcript
 								show: 'highlight right ' , (element row @ element column) asString;
 								cr.
-							delay copy wait.
-							"add to metaLinks in case it won't run to uninstall after animation ends"
-							"metaLinks add: leftMatrixMarkerHightlightLink."
-							rightMarkerHighlightLink uninstall ]
+							delay copy wait. ]
 						control: #after
 						instance: element
-						methodName: #copy
-						selector: #value:
-						arguments: #(value)) getLink.
+						methodName: #copy) selfValue; oneShot; getLink.
 					self addLink: rightMarkerHighlightLink ].
 			rightMarkerElement
 				ifNil: [ rightMarkerElement := (COOSparseMatrixVisualizer new
 						getElementShapeScaled: 5) elementOn: element ].
-			element ifNotNil: [ composer selectModel: element inGroup: #right.
+			element
+				ifNotNil: [ composer selectModel: element inGroup: #right.
 					Transcript
 						show: 'select right ' , (element row @ element column) asString;
 						cr.

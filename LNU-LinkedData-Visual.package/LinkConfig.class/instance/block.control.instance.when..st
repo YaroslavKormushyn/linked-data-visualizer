@@ -4,9 +4,8 @@ block: aCommandBlock control: aControl instance: anInstance when: whenControl
 		ifFalse: [ Error signal: 'Invalid operation control: ' , aControl asString ].
 	(varControls contains: whenControl)
 		ifFalse: [ Error signal: 'Invalid variable control: ' , whenControl asString ].
-	anInstance isNil
-		ifTrue: [ Error signal: 'Binding instance cannot be nil.' ].
-		commandBlock := aCommandBlock.
-		control := aControl .
-		instance := anInstance .
-		when := whenControl 
+	anInstance ifNil: [ Error signal: 'Binding instance cannot be nil.' ].
+	block := aCommandBlock.
+	control := aControl.
+	instance := anInstance.
+	when := whenControl
