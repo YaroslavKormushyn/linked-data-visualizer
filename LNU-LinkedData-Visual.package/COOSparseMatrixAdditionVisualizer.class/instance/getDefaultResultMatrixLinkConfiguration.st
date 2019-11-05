@@ -1,21 +1,19 @@
 as yet unclassified
 getDefaultResultMatrixLinkConfiguration
 	^ {(TempVarLinkConfig
-		commandBlock: [ :value | 
+		block: [ :value | 
 			| resultMatrixUpdateLinkLast |
 			operands at: #result put: value.
 			"initialize the view for the updates not to fail"
 			self addResultVisualizer.
 			self setPositions.
 			resultMatrixUpdateLinkLast := (SlotLinkConfig
-				commandBlock: [ self updateResultWith: value.
-					"uninstall the initial block which suspends the process"
-					self removeLink: resultMatrixUpdateLinkLast.
+				block: [ self updateResultWith: value.
 					"replace it with a new one without the suspend"
 					self
 						addLinks:
 							{(SlotLinkConfig
-								commandBlock: [ self updateResultWith: value ]
+								block: [ self updateResultWith: value ]
 								control: #after
 								instance: value
 								slotName: #last
@@ -27,11 +25,13 @@ getDefaultResultMatrixLinkConfiguration
 				control: #after
 				instance: value
 				slotName: #last
-				when: #write) getLink.
+				when: #write)
+				oneShot;
+				getLink.
 			self
 				addLinks:
 					{(SlotLinkConfig
-						commandBlock: [ self updateResultWith: value ]
+						block: [ self updateResultWith: value ]
 						control: #after
 						instance: value
 						slotName: #first
@@ -41,6 +41,4 @@ getDefaultResultMatrixLinkConfiguration
 		instance: (operands at: #left)
 		methodName: #+
 		tempVarName: #result
-		when: #write
-		metaObjectSelector: #value
-		metaObjectArguments: #(value))}
+		when: #write) selfValue }

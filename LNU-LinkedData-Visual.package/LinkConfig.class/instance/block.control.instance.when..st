@@ -1,5 +1,5 @@
 as yet unclassified
-commandBlock: aCommandBlock control: aControl instance: anInstance when: whenControl
+block: aCommandBlock control: aControl instance: anInstance when: whenControl
 	(operControls contains: aControl)
 		ifFalse: [ Error signal: 'Invalid operation control: ' , aControl asString ].
 	(varControls contains: whenControl)

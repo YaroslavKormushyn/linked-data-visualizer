@@ -3,7 +3,7 @@ getDefaultOperandsLinkConfiguration
 	| method |
 	method := #+.
 	^ {(TempVarLinkConfig
-		commandBlock: [ :value | 
+		block: [ :value | 
 			"remove selection from previous marker element"
 			value isNotNil
 				ifTrue: [ composer deselectModel: value inGroup: #left ] ]
@@ -12,10 +12,10 @@ getDefaultOperandsLinkConfiguration
 		methodName: method
 		tempVarName: #leftMatrixMarker
 		when: #write
-		metaObjectSelector: #value:
-		metaObjectArguments: #(value)) getLink.
+		selector: #value:
+		arguments: #(value)) getLink.
 	(TempVarLinkConfig
-		commandBlock: [ :element | 
+		block: [ :element | 
 			| leftMarkerHighlightLink |
 			"select current marker element"
 			leftMatrixMarker := element.
@@ -23,7 +23,7 @@ getDefaultOperandsLinkConfiguration
 			"uninstalls itself after one use since the algorithm does not revert"
 			element
 				ifNotNil: [ leftMarkerHighlightLink := (MethodLinkConfig
-						commandBlock: [ composer highlightModel: element inGroup: #left.
+						block: [ composer highlightModel: element inGroup: #left.
 							Transcript
 								show: 'highlight left ' , (element row @ element column) asString;
 								cr.
@@ -50,10 +50,10 @@ getDefaultOperandsLinkConfiguration
 		methodName: method
 		tempVarName: #leftMatrixMarker
 		when: #write
-		metaObjectSelector: #value:
-		metaObjectArguments: #(value)) getLink.
+		selector: #value:
+		arguments: #(value)) getLink.
 	(TempVarLinkConfig
-		commandBlock: [ :value | 
+		block: [ :value | 
 			"remove selection from previous marker element"
 			value isNotNil
 				ifTrue: [ composer deselectModel: value inGroup: #right ] ]
@@ -62,17 +62,17 @@ getDefaultOperandsLinkConfiguration
 		methodName: method
 		tempVarName: #rightMatrixMarker
 		when: #write
-		metaObjectSelector: #value:
-		metaObjectArguments: #(value)) getLink.
+		selector: #value:
+		arguments: #(value)) getLink.
 	(TempVarLinkConfig
-		commandBlock: [ :element | 
+		block: [ :element | 
 			| rightMarkerHighlightLink |
 			rightMatrixMarker := element.
 			"highlights marker if it was copied - most common path in the method"
 			"uninstalls itself after one use since the algorithm does not revert"
 			element
 				ifNotNil: [ rightMarkerHighlightLink := (MethodLinkConfig
-						commandBlock: [ :elementCopy | 
+						block: [ :elementCopy | 
 							"elementCopy is the copied object which we use to set a link to value:"
 							"with that we know if it's selecting left and right markers or only one of them"
 							| leftMatrixMarkerHightlightLink |
@@ -105,8 +105,8 @@ getDefaultOperandsLinkConfiguration
 						control: #after
 						instance: element
 						methodName: #copy
-						metaObjectSelector: #value:
-						metaObjectArguments: #(value)) getLink.
+						selector: #value:
+						arguments: #(value)) getLink.
 					self addLink: rightMarkerHighlightLink ].
 			rightMarkerElement
 				ifNil: [ rightMarkerElement := (COOSparseMatrixVisualizer new
@@ -122,5 +122,5 @@ getDefaultOperandsLinkConfiguration
 		methodName: method
 		tempVarName: #rightMatrixMarker
 		when: #write
-		metaObjectSelector: #value:
-		metaObjectArguments: #(value)) getLink}
+		selector: #value:
+		arguments: #(value)) getLink}

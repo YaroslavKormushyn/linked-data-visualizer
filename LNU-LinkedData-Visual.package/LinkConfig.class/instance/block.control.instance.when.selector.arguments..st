@@ -1,5 +1,5 @@
 as yet unclassified
-commandBlock: aCommandBlock control: aControl instance: anInstance when: whenControl metaObjectSelector: selector metaObjectArguments: args
+block: aCommandBlock control: aControl instance: anInstance when: whenControl selector: selector arguments: args
 	(operControls contains: aControl)
 		ifFalse: [ Error signal: 'Invalid operation control: ' , aControl asString ].
 	(varControls contains: whenControl)
