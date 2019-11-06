@@ -1,3 +1,4 @@
 as yet unclassified
 oneShot
-	linkOptionsConfigBlocks add: [:metaLink | metaLink optionOneShot: True]
+	linkOptionsConfigBlocks
+		add: [ :metaLink | metaLink optionOneShot: true ]

@@ -6,6 +6,7 @@ getDefaultResultMatrixLinkConfiguration
 			operands at: #result put: value.
 			"initialize the view for the updates not to fail"
 			self addResultVisualizer.
+			self addMarkerElements.
 			self setPositions.
 			resultMatrixUpdateLinkLast := (SlotLinkConfig
 				block: [ self updateResultWith: value.
@@ -16,14 +17,14 @@ getDefaultResultMatrixLinkConfiguration
 								block: [ self updateResultWith: value ]
 								instance: value
 								slotName: #last
-								when: {#after.#write}) getLink.
+								when: {#after . #write}) getLink.
 					"signal to root multiplication method that we finished initializing"
 					semaphore signal.
 					"wait for input before starting the operation"
 					process suspend ]
 				instance: value
 				slotName: #last
-				when: {#after.#write})
+				when: {#after . #write})
 				oneShot;
 				getLink.
 			self
@@ -32,10 +33,9 @@ getDefaultResultMatrixLinkConfiguration
 						block: [ self updateResultWith: value ]
 						instance: value
 						slotName: #first
-						when: {#after.#write}) getLink.
+						when: {#after . #write}) getLink.
 					resultMatrixUpdateLinkLast} ]
-		control: #after
 		instance: (operands at: #left)
 		methodName: operation
 		tempVarName: #result
-		when: #write) selfValue}
+		when: {#after . #write}) selfValue}

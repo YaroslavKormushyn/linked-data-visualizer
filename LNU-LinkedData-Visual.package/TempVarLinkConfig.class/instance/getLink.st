@@ -1,8 +1,8 @@
 as yet unclassified
 getLink
-	| link  |
-	link := super getLink.
-		instance
+	| link |
+	link := self getLinkBase.
+	instance
 		perform: self metaLinkMessage
 		withArguments:
 			{link.

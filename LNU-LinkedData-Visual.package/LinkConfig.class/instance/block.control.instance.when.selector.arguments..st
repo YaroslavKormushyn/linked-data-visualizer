@@ -1,13 +1,15 @@
 as yet unclassified
 block: aCommandBlock control: aControl instance: anInstance when: whenControl selector: aSelector arguments: args
-	(operControls contains: aControl)
-		ifFalse: [ Error signal: 'Invalid operation control: ' , aControl asString ].
-	(varControls contains: whenControl)
-		ifFalse: [ Error signal: 'Invalid variable control: ' , whenControl asString ].
-	anInstance ifNil: [ Error signal: 'Binding instance cannot be nil.' ].
 	block := aCommandBlock.
 	control := aControl.
 	instance := anInstance.
-	when := whenControl.
-	selector := aSelector asSymbol.
-	arguments := args collect: [ :arg | arg asSymbol ]
+	"default is #both - for compatibility with method config, where no when is needed"
+	when := whenControl ifNil: [ when ] ifNotNil: [ whenControl asSymbol].
+	"default selector is #value - no public setter"
+	selector := aSelector
+		ifNil: [ selector ]
+		ifNotNil: [ aSelector asSymbol ].
+	"default args are nil - no public setter"
+	arguments := args
+		ifNil: [ nil ]
+		ifNotNil: [ args collect: [ :arg | arg asSymbol ] ]

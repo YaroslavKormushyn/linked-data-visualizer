@@ -1,6 +1,6 @@
 as yet unclassified
 block: aCommandBlock instance: anInstance methodName: methodName tempVarName: tempVarName when: controlAndWhen
-	^ (self new
+	^ (self
 		block: aCommandBlock
 		instance: anInstance
 		methodName: methodName

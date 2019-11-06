@@ -1,6 +1,6 @@
 as yet unclassified
 block: aCommandBlock control: aControl instance: anInstance classVarName: varName when: whenControl
-	^ (self new
+	^ (self
 		block: aCommandBlock
 		control: aControl
 		instance: anInstance

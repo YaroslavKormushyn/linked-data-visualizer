@@ -1,6 +1,6 @@
 as yet unclassified
 block: aCommandBlock control: aControl instance: anInstance methodName: methodName selector: selector arguments: args
-	^ (self new
+	^ (self
 		block: aCommandBlock
 		control: aControl
 		instance: anInstance

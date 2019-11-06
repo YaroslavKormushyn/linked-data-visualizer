@@ -18,8 +18,8 @@ show: operator on: leftOperand with: rightOperand
 			{(#left -> leftVisualizer).
 			(#right -> rightVisualizer)}.
 			
-	linkConfigs := self getDefaultLinkConfiguration.
-	operation := operator.
+
+	operation := operator.	linkConfigs := self getDefaultLinkConfiguration.
 	operationBlock := [ [ leftOperand
 		perform: operator asSymbol
 		with: rightOperand ]
