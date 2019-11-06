@@ -1,10 +1,9 @@
 initialization
-setPositions 
-composer move: #left onTheLeftOf: #right.
+setPositions
+	composer move: #left onTheLeftOf: #right.
 	composer move: #result onTheRightOf: #right.
 	composer move: #leftMarker below: #left.
 	composer move: #rightMarker below: #right.
-	"composer move: #nowProcessing above: #right."
 	composer setBackgroundColor: (Color gray alpha: 0.2) forGroup: #right.
 	composer setBackgroundColor: (Color gray alpha: 0.2) forGroup: #left.
 	composer
