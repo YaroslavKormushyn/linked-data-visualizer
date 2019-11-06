@@ -1,7 +1,6 @@
 accessing
 on: linkedStructure withView: newView
-	linkedStructure isNil
-		ifTrue: [ ^ self new ].
+	linkedStructure ifNil: [ ^ self new ].
 	^ self allSubclasses
 		detect: [ :cl | linkedStructure class isKindOf: cl objectType class ]
 		ifFound: [ :cl | (cl withView: newView) on: linkedStructure ]

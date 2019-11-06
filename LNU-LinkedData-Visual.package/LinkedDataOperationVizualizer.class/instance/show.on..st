@@ -4,6 +4,7 @@ show: operator on: operand
 	dataVisualizers := Dictionary
 		newFrom:
 			{(#left -> (LinkedDataVisualizer on: operand withView: composer view))}.
+	linkConfigs := self getDefaultLinkConfiguration.
 	operation := operator.
 	operationBlock := [ [ operand perform: operator asSymbol ]
 		ensure: [ self unlink ] ].

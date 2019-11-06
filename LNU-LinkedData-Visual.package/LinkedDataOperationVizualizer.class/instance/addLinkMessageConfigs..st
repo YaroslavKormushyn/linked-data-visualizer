@@ -1,4 +1,4 @@
 accessing
 addLinkMessageConfigs: messageConfigs
-	linkMessageConfigs
+	linkConfigs
 		addAll:messageConfigs

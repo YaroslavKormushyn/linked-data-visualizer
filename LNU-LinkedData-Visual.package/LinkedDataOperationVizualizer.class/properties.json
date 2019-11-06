@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "YaroslavKormushyn 11/6/2019 11:40",
 	"super" : "Object",
 	"category" : "LNU-LinkedData-Visual-Core",
 	"classinstvars" : [ ],
@@ -17,8 +17,9 @@
 		"metaLinks",
 		"delay",
 		"semaphore",
-		"linkMessageConfigs",
-		"linkTypeDictionary"
+		"linkTypeDictionary",
+		"linkConfigs",
+		"permittedOperations"
 	],
 	"name" : "LinkedDataOperationVizualizer",
 	"type" : "normal"

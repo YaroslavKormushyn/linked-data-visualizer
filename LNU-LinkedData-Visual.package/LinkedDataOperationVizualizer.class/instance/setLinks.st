@@ -1,3 +1,3 @@
 initialization
 setLinks
-	metaLinks := linkMessageConfigs  collect: [:config | config getLink ]
+	metaLinks := linkConfigs  collect: [:config | config getLink ]

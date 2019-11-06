@@ -1,3 +1,3 @@
 accessing
 linkMessages: messageConfigs
-	linkMessageConfigs := messageConfigs collect: [ :msg | msg asSymbol ]
+	linkConfigs := messageConfigs collect: [ :msg | msg asSymbol ]
