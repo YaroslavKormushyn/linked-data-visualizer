@@ -3,4 +3,5 @@ getDefaultLinkConfiguration
 	"Set links for result matrix update on viewer"
 
 	^ (self getDefaultResultMatrixLinkConfiguration
-		, self getDefaultOperandsLinkConfiguration) asOrderedCollection 
+		, self getDefaultOperandsLinkConfiguration,
+		self getViewUpdateLinks) asOrderedCollection
