@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "YaroslavKormushyn 11/6/2019 11:40",
 	"super" : "Object",
-	"category" : "LNU-LinkedData-Visual-Core",
+	"category" : "LNU-LinkedData-Visual-Operations",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
