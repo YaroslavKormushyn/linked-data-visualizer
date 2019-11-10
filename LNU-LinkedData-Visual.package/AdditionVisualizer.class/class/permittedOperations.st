@@ -1,3 +1,3 @@
 accessing
 permittedOperations
-	^ #(#+)
+	^ #(#+ #add:)

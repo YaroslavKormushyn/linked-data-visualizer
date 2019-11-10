@@ -1,3 +1,3 @@
 testing method dictionary
 canVisualize: operation
-	self subclassResponsibility
+	^ self permittedOperations includes: operation
