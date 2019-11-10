@@ -3,17 +3,24 @@ getViewUpdateLinkConfiguration
 	"set links for element update on value change"
 
 	^ (((operands at: #left) viewElements
-		collect: [ :node | 
-			MethodLinkConfig
-				block: [ (composer view elementsFromModel: node) elements do: [ :el | el updateModelAndRedraw: node ] ]
-				control: #after
-				instance: node
-				methodName: #value: ])
-		,
-			((operands at: #right) viewElements
-				collect: [ :node | 
+		flatCollect: [ :node | 
+			(updateMessageDict at: node class)
+				collect: [ :updateMsg | 
 					MethodLinkConfig
-						block: [ (composer view elementsFromModel: node)  elements do: [ :el | el updateModelAndRedraw: node ] ]
+						block: [ (composer view elementsFromModel: node) elements
+								do: [ :el | el updateModelAndRedraw: node ] ]
 						control: #after
 						instance: node
-						methodName: #value: ])) asOrderedCollection
+						methodName: updateMsg asSymbol ] ])
+		,
+			((operands at: #right) viewElements
+				flatCollect: [ :node | 
+					(updateMessageDict at: node class)
+						collect: [ :updateMsg | 
+							MethodLinkConfig
+								block: [ (composer view elementsFromModel: node) elements
+										do: [ :el | el updateModelAndRedraw: node ] ]
+								control: #after
+								instance: node
+								methodName: updateMsg asSymbol ] ]))
+		asOrderedCollection
