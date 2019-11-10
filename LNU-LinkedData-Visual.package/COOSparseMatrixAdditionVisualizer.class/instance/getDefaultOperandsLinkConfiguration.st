@@ -46,12 +46,11 @@ getDefaultOperandsLinkConfiguration
 		when: {#before . #write}) selfValue.
 	(TempVarLinkConfig
 		block: [ :element | 
-			| rightMarkerHighlightLink |
 			rightMatrixMarker := element.
 			"highlights marker if it was copied - most common path in the method"
 			"uninstalls itself after one use since the algorithm does not revert"
 			element
-				ifNotNil: [ rightMarkerHighlightLink := (MethodLinkConfig
+				ifNotNil: [ (MethodLinkConfig
 						block: [ :elementCopy | 
 							"elementCopy is the copied object which we use to set a link to value:"
 							"with that we know if it's selecting left and right markers or only one of them"
@@ -62,9 +61,8 @@ getDefaultOperandsLinkConfiguration
 									delay copy wait ]
 								control: #after
 								instance: elementCopy
-								methodName: #value:)
-								oneShot;
-								getLink.
+								methodName: #value:) getLink.
+							"oneShot;"
 							"highlight the right marker and uninstall itself after first use"
 							composer highlightModel: element inGroup: #right.
 							delay copy wait ]
@@ -73,8 +71,7 @@ getDefaultOperandsLinkConfiguration
 						methodName: #copy)
 						selfValue;
 						oneShot;
-						getLink.
-					"self addLink: rightMarkerHighlightLink "].
+						getLink ].
 			rightMarkerElement
 				ifNil: [ rightMarkerElement := (COOSparseMatrixVisualizer new
 						getElementShapeScaled: 5) elementOn: element ].

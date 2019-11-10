@@ -2,5 +2,6 @@ as yet unclassified
 getDefaultLinkConfiguration
 	"Set links for result matrix update on viewer"
 
-	^ (self getDefaultResultMatrixLinkConfiguration
-		, self getDefaultOperandsLinkConfiguration) asOrderedCollection 
+	^ (self getViewUpdateLinkConfiguration,self getDefaultResultMatrixLinkConfiguration
+		, self getDefaultOperandsLinkConfiguration
+		) asOrderedCollection

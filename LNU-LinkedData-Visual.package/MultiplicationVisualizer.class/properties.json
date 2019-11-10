@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "BinaryOperationVisualizer",
-	"category" : "LNU-LinkedData-Visual-Core",
+	"category" : "LNU-LinkedData-Visual-Operations",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
