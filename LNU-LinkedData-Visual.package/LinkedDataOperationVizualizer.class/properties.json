@@ -18,9 +18,7 @@
 		"metaLinks",
 		"delay",
 		"semaphore",
-		"linkTypeDictionary",
-		"linkConfigs",
-		"permittedOperations"
+		"linkConfigs"
 	],
 	"name" : "LinkedDataOperationVizualizer",
 	"type" : "normal"
