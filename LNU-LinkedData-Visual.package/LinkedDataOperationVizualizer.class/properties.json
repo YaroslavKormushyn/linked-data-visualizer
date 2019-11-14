@@ -18,7 +18,8 @@
 		"metaLinks",
 		"delay",
 		"semaphore",
-		"linkConfigs"
+		"linkConfigs",
+		"context"
 	],
 	"name" : "LinkedDataOperationVizualizer",
 	"type" : "normal"

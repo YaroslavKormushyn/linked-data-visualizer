@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-LinkedData-Visual-Data",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"key",
+		"value",
+		"source"
+	],
+	"name" : "KeyedTreeElement",
+	"type" : "normal"
+}

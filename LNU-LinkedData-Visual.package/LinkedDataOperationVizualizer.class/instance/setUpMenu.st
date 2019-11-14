@@ -1,6 +1,6 @@
 initialization
 setUpMenu
-	composer view
+	"composer view
 		addMenu: 'Save'
 		callback: [ (RTCanvasExporter canvas: composer view canvas)
 				withoutFixedShapes;
@@ -12,7 +12,7 @@ setUpMenu
 					((TRPlatform current
 						dialogRequest: 'Please enter file name'
 						initialAnswer: 'export.png') ifNil: [ ^ nil ]);
-				export ].
+				export ]."
 	composer view addMenu: 'Pause' callback: [ process suspend ].
 	composer view
 		addMenu: 'Resume'

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MergeVisualizer",
+	"category" : "LNU-LinkedData-Visual-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "KeyedTreeMergeVisualizer",
+	"type" : "normal"
+}
