@@ -1,10 +1,16 @@
 accessing
 on: linkedStructure
-	| nodes elements |
+	| nodes elements layout |
 	nodes := self getElementsFor: linkedStructure.
+	nodes
+		addFirst:
+			(KeyedTreeElement new
+				source: linkedStructure;
+				key: #root;
+				yourself).
 	nodes isNil | nodes isEmpty
 		ifTrue: [ ^ self ].
-	elements := (shapes at: #data) elementsOn: nodes.
+	elements := self setElementsFor: nodes.
 	elements
 		when: TRMouseClick
 		do: [ :evt | 
@@ -14,7 +20,7 @@ on: linkedStructure
 				selection: cls source ].
 	elements @ RTDraggable @ RTPopup.
 	view addAll: elements.
-	RTGridLayout on: elements.
 	self drawEdgesWith: elements.
-	self setPositionsFor: elements.
+	layout := RTTreeLayout new verticalGap: 20; horizontalGap: 20; yourself.
+	layout on: elements.
 	^ self

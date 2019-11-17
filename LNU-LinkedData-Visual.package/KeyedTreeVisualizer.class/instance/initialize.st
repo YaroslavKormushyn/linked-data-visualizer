@@ -1,4 +1,5 @@
 initialization
-initialize 
-super initialize.
-linkMessages := #(#keys) asSet.
+initialize
+	super initialize.
+	elementSize := 100.
+	linkMessages := #(#keys) asSet
