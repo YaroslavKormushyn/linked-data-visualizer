@@ -1,3 +1,4 @@
 as yet unclassified
 getDefaultLinkConfiguration
-	^{#he}
+	^ (self getOperandsLinkConfiguration,
+	self getViewUpdateLinkConfiguration) asOrderedCollection 
