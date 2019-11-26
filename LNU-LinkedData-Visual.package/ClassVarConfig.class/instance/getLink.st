@@ -1,7 +1,7 @@
 as yet unclassified
 getLink
 	| link |
-	link := super getLinkBase.
+	link := self getLinkBase.
 	instance
 		perform: self metaLinkMessage
 		withArguments:

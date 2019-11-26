@@ -3,11 +3,9 @@ drawEdgesWith: elements
 	| edgeBuilder |
 	edgeBuilder := self getEdgeBuilder.
 	edgeBuilder elements: elements.
-	edgeBuilder
+	^ edgeBuilder
 		moveBehind;
 		highlightable;
-		labelElement: [ :anEdge | anEdge to model key ]
-			fontSize: elementSize / 10;
 		connectToAll: [ :el | 
 			(el source isKindOf: KeyedTree)
 				ifTrue: [ | subset |

@@ -1,6 +1,6 @@
 as yet unclassified
 getDefaultResultMatrixLinkConfiguration
-	^ {(TempVarLinkConfig
+	^ {(TempVarConfig
 		block: [ :value | 
 			| resultMatrixUpdateLinkLast |
 			operands at: #result put: value.
@@ -8,12 +8,12 @@ getDefaultResultMatrixLinkConfiguration
 			self addResultVisualizer.
 			self addMarkerElements.
 			self setPositions.
-			resultMatrixUpdateLinkLast := (SlotLinkConfig
+			resultMatrixUpdateLinkLast := (SlotConfig
 				block: [ self updateResultWith: value.
 					"replace it with a new one without the suspend"
 					self
 						addLink:
-							(SlotLinkConfig
+							(SlotConfig
 								block: [ self updateResultWith: value ]
 								instance: value
 								slotName: #last
@@ -29,7 +29,7 @@ getDefaultResultMatrixLinkConfiguration
 				getLink.
 			self
 				addLinks:
-					{(SlotLinkConfig
+					{(SlotConfig
 						block: [ self updateResultWith: value ]
 						instance: value
 						slotName: #first

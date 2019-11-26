@@ -1,20 +1,20 @@
 as yet unclassified
 getDefaultOperandsLinkConfiguration
-	^ {(TempVarLinkConfig
+	^ {(TempVarConfig
 		block:
 			[ :value | "remove selection from previous marker element" value ifNotNil: [ composer deselectModel: value inGroup: #left ] ]
 		instance: (operands at: #left)
 		methodName: operation
 		tempVarName: #leftMatrixMarker
 		when: {#before . #write}) selfValue.
-	(TempVarLinkConfig
+	(TempVarConfig
 		block: [ :element | 
 			"select current marker element"
 			leftMatrixMarker := element.
 			"highlights marker if it was copied - most common path in the method"
 			"uninstalls itself after one use since the algorithm does not revert"
 			element
-				ifNotNil: [ (MethodLinkConfig
+				ifNotNil: [ (MethodConfig
 						block: [ composer highlightModel: element inGroup: #left.
 							delay copy wait ]
 						control: #after
@@ -35,7 +35,7 @@ getDefaultOperandsLinkConfiguration
 		methodName: operation
 		tempVarName: #leftMatrixMarker
 		when: {#after . #write}) selfValue.
-	(TempVarLinkConfig
+	(TempVarConfig
 		block: [ :value | 
 			"remove selection from previous marker element"
 			value isNotNil
@@ -44,17 +44,17 @@ getDefaultOperandsLinkConfiguration
 		methodName: operation
 		tempVarName: #rightMatrixMarker
 		when: {#before . #write}) selfValue.
-	(TempVarLinkConfig
+	(TempVarConfig
 		block: [ :element | 
 			rightMatrixMarker := element.
 			"highlights marker if it was copied - most common path in the method"
 			"uninstalls itself after one use since the algorithm does not revert"
 			element
-				ifNotNil: [ (MethodLinkConfig
+				ifNotNil: [ (MethodConfig
 						block: [ :elementCopy | 
 							"elementCopy is the copied object which we use to set a link to value:"
 							"with that we know if it's selecting left and right markers or only one of them"
-							(MethodLinkConfig
+							(MethodConfig
 								block: [ "the link is set to right only according to the method code"
 									"left is never the object which is copied in this situation"
 									composer highlightModel: leftMatrixMarker inGroup: #left.

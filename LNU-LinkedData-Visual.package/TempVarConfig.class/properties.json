@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "YaroslavKormushyn 11/6/2019 10:26",
-	"super" : "LinkConfig",
+	"commentStamp" : "YaroslavKormushyn 11/6/2019 10:24",
+	"super" : "MethodConfig",
 	"category" : "LNU-LinkedData-Visual-Config",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"methodName"
+		"tempVarName"
 	],
-	"name" : "MethodLinkConfig",
+	"name" : "TempVarConfig",
 	"type" : "normal"
 }

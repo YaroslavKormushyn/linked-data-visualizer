@@ -1,9 +1,10 @@
 copying
 copyFrom: aLinkConfig
-	^ self
+	^ (self
 		block: aLinkConfig block
 		control: aLinkConfig control
 		instance: aLinkConfig instance
 		when: aLinkConfig when
 		selector: aLinkConfig selector
-		arguments: aLinkConfig arguments
+		arguments: aLinkConfig arguments)
+		linkOptionsConfigBlocks: aLinkConfig linkOptionsConfigBlocks

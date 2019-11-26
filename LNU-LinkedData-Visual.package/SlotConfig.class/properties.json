@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "YaroslavKormushyn 11/6/2019 10:26",
+	"super" : "LinkConfig",
+	"category" : "LNU-LinkedData-Visual-Config",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slotName"
+	],
+	"name" : "SlotConfig",
+	"type" : "normal"
+}

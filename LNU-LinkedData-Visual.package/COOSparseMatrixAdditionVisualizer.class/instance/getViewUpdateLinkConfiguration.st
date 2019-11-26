@@ -6,7 +6,7 @@ getViewUpdateLinkConfiguration
 		flatCollect: [ :node | 
 			(updateMessageDict at: node class)
 				collect: [ :updateMsg | 
-					MethodLinkConfig
+					MethodConfig
 						block: [ (composer view elementsFromModel: node) elements
 								do: [ :el | el updateModelAndRedraw: node ] ]
 						control: #after
@@ -17,7 +17,7 @@ getViewUpdateLinkConfiguration
 				flatCollect: [ :node | 
 					(updateMessageDict at: node class)
 						collect: [ :updateMsg | 
-							MethodLinkConfig
+							MethodConfig
 								block: [ (composer view elementsFromModel: node) elements
 										do: [ :el | el updateModelAndRedraw: node ] ]
 								control: #after

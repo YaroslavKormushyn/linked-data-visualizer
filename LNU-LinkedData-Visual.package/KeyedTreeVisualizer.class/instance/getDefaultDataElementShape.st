@@ -6,7 +6,7 @@ getDefaultDataElementShape
 		size: elementSize.
 	valueLabel := RTLabel new
 		text: [ :el | el value ];
-		height: elementSize / 4;
+		height: elementSize / 5;
 		color: (colors at: #label).
 	"keyLabel := RTLabel new
 		text: [ :el | el key ];

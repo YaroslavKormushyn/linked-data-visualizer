@@ -1,6 +1,6 @@
 accessing
 on: linkedStructure
-	| nodes elements layout |
+	| nodes elements layout edges |
 	nodes := self getElementsFor: linkedStructure.
 	nodes
 		addFirst:
@@ -20,7 +20,17 @@ on: linkedStructure
 				selection: cls source ].
 	elements @ RTDraggable @ RTPopup.
 	view addAll: elements.
-	self drawEdgesWith: elements.
-	layout := RTTreeLayout new verticalGap: 20; horizontalGap: 20; yourself.
+	edges := self drawEdgesWith: elements.
+	layout := RTTreeLayout new
+		verticalGap: 20;
+		horizontalGap: 20;
+		yourself.
 	layout on: elements.
+	edges
+		@
+			(RTLabeled new
+				fontSize: 10;
+				color: Color gray;
+				setAsShouldBeInTheFront;
+				textElement: [ :anEdge | anEdge to model key ]).
 	^ self

@@ -1,3 +1,3 @@
 testing method dictionary
 canVisualize: operation
-	^ #(#merge) includes: operation
+	^ #(#merge:) includes: operation
