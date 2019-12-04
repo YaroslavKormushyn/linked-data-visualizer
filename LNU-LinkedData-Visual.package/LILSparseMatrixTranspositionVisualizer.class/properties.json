@@ -6,10 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"leftMarkerElement",
-		"rightMarkerElement",
 		"leftMatrixMarker",
-		"rightMatrixMarker"
+		"rightMatrixMarker",
+		"sourceMarkerElement"
 	],
 	"name" : "LILSparseMatrixTranspositionVisualizer",
 	"type" : "normal"
