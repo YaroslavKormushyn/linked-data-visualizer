@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TranspositionVisualizer",
+	"category" : "LNU-LinkedData-Visual-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftMarkerElement",
+		"rightMarkerElement",
+		"leftMatrixMarker",
+		"rightMatrixMarker"
+	],
+	"name" : "LILSparseMatrixTranspositionVisualizer",
+	"type" : "normal"
+}
