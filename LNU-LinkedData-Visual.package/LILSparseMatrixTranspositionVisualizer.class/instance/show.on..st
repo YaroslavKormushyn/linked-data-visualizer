@@ -1,6 +1,9 @@
 as yet unclassified
 show: operator on: operand
 	super show: operator on: operand.
+	sourceMarkerElement := (dataVisualizers at: #source)
+		getDefaultDataElementShape
+		elementOn: (MatrixElement row: 0 column: 0 value: 0).
 	[ [ process resume.
 	semaphore wait ] on: Error fork: [ :ex | Error signal: ex ] ]
 		newProcess resume.

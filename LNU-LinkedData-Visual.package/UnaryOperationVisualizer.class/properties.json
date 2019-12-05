@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "LinkedDataOperationVizualizer",
+	"super" : "LinkedDataOperationVisualizer",
 	"category" : "LNU-LinkedData-Visual-Operations",
 	"classinstvars" : [ ],
 	"pools" : [ ],

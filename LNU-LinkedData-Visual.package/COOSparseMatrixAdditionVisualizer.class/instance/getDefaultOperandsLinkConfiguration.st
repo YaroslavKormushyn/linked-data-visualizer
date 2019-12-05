@@ -25,7 +25,7 @@ getDefaultOperandsLinkConfiguration
 			"draw the marker element on the view if its the initialization"
 			leftMarkerElement
 				ifNil: [ leftMarkerElement := (COOSparseMatrixVisualizer new
-						getElementShapeScaled: 5) elementOn: element ].
+						getElementShapeScaled: scale) elementOn: element ].
 			"select the element and update the view"
 			element
 				ifNotNil: [ composer selectModel: element inGroup: #left.
@@ -74,7 +74,7 @@ getDefaultOperandsLinkConfiguration
 						getLink ].
 			rightMarkerElement
 				ifNil: [ rightMarkerElement := (COOSparseMatrixVisualizer new
-						getElementShapeScaled: 5) elementOn: element ].
+						getElementShapeScaled: scale) elementOn: element ].
 			element
 				ifNotNil: [ composer selectModel: element inGroup: #right.
 					rightMarkerElement updateModelAndRedraw: element.

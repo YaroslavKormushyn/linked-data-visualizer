@@ -9,7 +9,8 @@
 		"leftMarkerElement",
 		"rightMarkerElement",
 		"leftMatrixMarker",
-		"rightMatrixMarker"
+		"rightMatrixMarker",
+		"scale"
 	],
 	"name" : "COOSparseMatrixAdditionVisualizer",
 	"type" : "normal"

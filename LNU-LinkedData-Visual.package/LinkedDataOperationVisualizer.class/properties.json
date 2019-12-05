@@ -21,6 +21,6 @@
 		"linkConfigs",
 		"context"
 	],
-	"name" : "LinkedDataOperationVizualizer",
+	"name" : "LinkedDataOperationVisualizer",
 	"type" : "normal"
 }

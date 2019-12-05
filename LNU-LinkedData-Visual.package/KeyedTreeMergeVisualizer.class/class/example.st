@@ -20,4 +20,4 @@ kt1 := KeyedTree new
 				yourself);
 		yourself.
 		
-	^ LinkedDataOperationVizualizer show: #merge: on: kt1 with: kt2
+	^ LinkedDataOperationVisualizer show: #merge: on: kt1 with: kt2

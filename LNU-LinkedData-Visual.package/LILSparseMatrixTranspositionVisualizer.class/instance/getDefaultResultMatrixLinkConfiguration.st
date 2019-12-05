@@ -1,6 +1,6 @@
 as yet unclassified
 getDefaultResultMatrixLinkConfiguration
-	^ {(TempVarConfig
+	^ {((TempVarConfig
 		block: [ :value | 
 			| resultMatrixRowsUpdate |
 			operands at: #result put: value.
@@ -8,15 +8,18 @@ getDefaultResultMatrixLinkConfiguration
 			self addResultVisualizer.
 			self addMarkerElements.
 			self setPositions.
-			resultMatrixRowsUpdate := (SlotConfig
+			resultMatrixRowsUpdate := (MethodConfig
 				block: [ self updateResultWith: value ]
-				instance: value
-				slotName: #rows
-				when: {#after . #read}) getLink.
+				instance: value rows
+				methodName: #at:put:
+				control: #after)
+				getLink.
 			self addLink: resultMatrixRowsUpdate.
 			"send update that the UI can be initialized"
 			semaphore signal ]
-		instance: (operands at: #left)
+		instance: (operands at: #source)
 		methodName: operation
 		tempVarName: #result
-		when: {#after . #write}) selfValue}
+		when: {#after . #write})
+		selfValue;
+		oneShot)}

@@ -7,8 +7,8 @@ initialize
 		size: 1;
 		baseSize: 3.
 	shapeBuilder styledLine
-		orthoHorizontalLine;
-		shortestDistanceAttachPoint ;
+		orthoVerticalLine;
+		verticalBottomToTopAttachPoint;
 		head: arrowHead;
 		color: Color black.
 	shapes at: #wrappingDownEdgeBuilder put: shapeBuilder.
@@ -18,7 +18,7 @@ initialize
 		baseSize: 3.
 	shapeBuilder styledLine
 		orthoVerticalLine;
-		shortestDistanceAttachPoint;
+		verticalTopToBottomAttachPoint ;
 		head: arrowHead;
 		color: Color black.
 	shapes at: #wrappingUpEdgeBuilder put: shapeBuilder

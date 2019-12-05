@@ -12,15 +12,12 @@ getDefaultDataElementShape
 		color: (colors at: #label).
 	indexLabel := RTLabel new
 		height: elementSize / 5;
-		text: [ :el | 
-			| row col |
-			row := el row.
-			col := el column.
-			row isNil
-				ifTrue: [ row := 0 ].
+		text: [ :elLink | 
+			|  col |
+			col := elLink value column.
 			col isNil
 				ifTrue: [ col := 0 ].
-			row @ col ];
+			'col: ' , col asString ];
 		color: (colors at: #label).
 	^ RTCompositeShape new
 		add: box;
