@@ -1,4 +1,4 @@
 initialization
 initialize
-super initialize.
-	linkMessages := #(#next) asSet
+	super initialize.
+	linkMessages := #(#nextLink) asSet

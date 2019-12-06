@@ -8,7 +8,10 @@
 	"instvars" : [
 		"leftMatrixMarker",
 		"rightMatrixMarker",
-		"sourceMarkerElement"
+		"sourceMarkerElement",
+		"currentRowIndex",
+		"currentColumnIndex",
+		"tempListLabelElement"
 	],
 	"name" : "LILSparseMatrixTranspositionVisualizer",
 	"type" : "normal"

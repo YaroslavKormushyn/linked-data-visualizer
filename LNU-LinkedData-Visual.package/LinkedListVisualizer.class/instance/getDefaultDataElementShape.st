@@ -8,12 +8,12 @@ getDefaultDataElementShape
 		text: [ :el | 
 			el value isNil
 				ifTrue: 0
-				ifFalse: [ el value ] ];
+				ifFalse: [ el value value ] ];
 		color: (colors at: #label).
 	indexLabel := RTLabel new
 		height: elementSize / 5;
 		text: [ :elLink | 
-			|  col |
+			| col |
 			col := elLink value column.
 			col isNil
 				ifTrue: [ col := 0 ].

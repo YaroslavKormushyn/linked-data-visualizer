@@ -5,4 +5,4 @@ setPositionsFor: elements
 		thenDo: [ :e | 
 			| aNode |
 			aNode := e model value.
-			e translateTo: (elementSize + gap) * aNode column ]
+			e translateTo: ((elementSize + gap) * aNode column) @ 0 ]
