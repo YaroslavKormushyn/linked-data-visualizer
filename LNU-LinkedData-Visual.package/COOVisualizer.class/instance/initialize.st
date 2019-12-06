@@ -1,6 +1,6 @@
 initialization
 initialize
-	| shapeBuilder arrowHead arrowTail |
+	| shapeBuilder arrowHead |
 	super initialize.
 	shapeBuilder := RTShapeBuilder new.
 	arrowHead := RTSimpleArrow asHead
@@ -18,7 +18,7 @@ initialize
 		baseSize: 3.
 	shapeBuilder styledLine
 		orthoVerticalLine;
-		verticalTopToBottomAttachPoint ;
+		verticalTopToBottomAttachPoint;
 		head: arrowHead;
 		color: Color black.
 	shapes at: #wrappingUpEdgeBuilder put: shapeBuilder

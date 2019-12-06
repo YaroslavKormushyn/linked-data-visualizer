@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "MultiplicationVisualizer",
+	"category" : "LNU-LinkedData-Visual-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scale",
+		"leftMarkerElement",
+		"rightMarkerElement",
+		"leftMatrixMarker",
+		"rightMatrixMarker",
+		"nowProcessingLabel",
+		"newElementValueLabel",
+		"nowProcessingLabelElement",
+		"newElementValueLabelElement",
+		"currentRowIndex",
+		"currentColIndex"
+	],
+	"name" : "TWSparseMatrixMultiplicationVisualizer",
+	"type" : "normal"
+}

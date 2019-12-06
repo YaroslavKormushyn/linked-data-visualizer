@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SparseMatrixVisualizer",
+	"category" : "LNU-LinkedData-Visual-Data",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"edgeOffset"
+	],
+	"name" : "TWVisualizer",
+	"type" : "normal"
+}

@@ -5,7 +5,7 @@ initialize
 	colors := Dictionary
 		newFrom:
 			{(#data -> Color blue).
-			(#header -> Color green).
+			(#header -> Color darkGray).
 			(#select -> Color red).
 			(#highlight -> Color yellow).
 			(#label -> Color white)}.

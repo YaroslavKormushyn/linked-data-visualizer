@@ -2,6 +2,7 @@ initialization
 initialize
 	super initialize.
 	linkMessages := #(#next) asSet.
-	shapes
+	gap := 10.
+	 shapes
 		at: #tempListLabel
 		put: (RTLabel new text: [ :val | 'New ' , val asString , ' row:' ])
