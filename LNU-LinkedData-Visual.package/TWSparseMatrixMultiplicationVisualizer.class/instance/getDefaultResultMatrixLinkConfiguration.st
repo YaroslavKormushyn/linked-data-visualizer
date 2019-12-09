@@ -16,6 +16,7 @@ getDefaultResultMatrixLinkConfiguration
 				block: [ Transcript
 						show: 'result row withIndexDo:';
 						cr.
+					
 					self updateResultWith: (operands at: #result).
 					delay copy wait ]
 				instance: value rows
@@ -27,6 +28,7 @@ getDefaultResultMatrixLinkConfiguration
 				block: [ Transcript
 						show: 'result columns withIndexDo:';
 						cr.
+					
 					self updateResultWith: (operands at: #result).
 					self removeAdditionalElements ]
 				instance: value columns
@@ -44,11 +46,17 @@ getDefaultResultMatrixLinkConfiguration
 		instance: (operands at: #left)
 		methodName: operation
 		tempVarName: #result
-		when: {#after . #write}) selfValue	.
+		when: {#after . #write}) selfValue.
 	(TempVarConfig
 		block: [ Transcript
 				show: 'resultMarker update';
 				cr.
+				leftMarkerElement model
+				ifNotNil: [ leftMarkerElement model column ~= 0
+						ifTrue: [ composer deselectModel: leftMarkerElement model inGroup: #left ] ].
+					rightMarkerElement model
+				ifNotNil: [ rightMarkerElement model row ~= 0
+						ifTrue: [ composer deselectModel: rightMarkerElement model inGroup: #right ] ].
 			self updateResultWith: (operands at: #result) ]
 		instance: (operands at: #left)
 		methodName: operation

@@ -14,21 +14,21 @@ setPositions
 	composer
 		nameGroup: #left
 		as: 'left'
-		sized: scale * defaultLabelHeight.
+		sized: scale/ 1.5 * defaultLabelHeight.
 	composer
 		nameGroup: #right
 		as: 'right'
-		sized: scale * defaultLabelHeight.
+		sized: scale/ 1.5 * defaultLabelHeight.
 	composer
 		nameGroup: #result
 		as: 'result'
-		sized: scale * defaultLabelHeight.
+		sized: scale/ 1.5 * defaultLabelHeight.
 	composer
 		nameGroup: #leftMarker
 		as: 'left marker'
-		sized: scale * defaultLabelHeight.
+		sized: scale/ 1.5 * defaultLabelHeight.
 	composer
 		nameGroup: #rightMarker
 		as: 'right marker'
-		sized: scale * defaultLabelHeight.
+		sized: scale/ 1.5 * defaultLabelHeight.
 	composer group: #labels

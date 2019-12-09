@@ -78,6 +78,7 @@ getDefaultOperandsLinkConfiguration
 		block: [ :colNums | 
 			"grey out empty cols"
 			| emptyColIndexes colNumsDo |
+			"self halt."
 			emptyColIndexes := (1 to: (operands at: #right) columnNumber)
 				copyWithoutAll: colNums.
 			emptyColIndexes

@@ -11,7 +11,8 @@
 		"sourceMarkerElement",
 		"currentRowIndex",
 		"currentColumnIndex",
-		"tempListLabelElement"
+		"tempListLabelElement",
+		"scale"
 	],
 	"name" : "LILSparseMatrixTranspositionVisualizer",
 	"type" : "normal"
