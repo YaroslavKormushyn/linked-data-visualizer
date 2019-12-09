@@ -33,4 +33,4 @@ Internal Representation and Key Implementation Points.
  
    Implementation Points
 	I assume that the structure you want to display has the links embedded into the nodes.
-	If you have some other linking logic - feel free to inherit from me and override drawEdgesWith: and setPositionsFor:.
+	If you have some other linking logic - feel free to inherit from me and override display:, drawEdgesWith: and setPositionsFor:.
