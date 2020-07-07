@@ -8,4 +8,4 @@ updateResultWith: result
 		redrawNamesFor: namedGroups
 		textSize: scale / 1.5 * defaultLabelHeight.
 	composer redrawBackgroundsFor: backgroundGroups.
-	composer view canvas focusOnCenterScaled
+	composer view canvas camera focusOnCenterScaled

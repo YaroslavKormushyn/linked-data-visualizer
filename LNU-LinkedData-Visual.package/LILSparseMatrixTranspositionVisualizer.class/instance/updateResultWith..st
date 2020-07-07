@@ -4,4 +4,4 @@ updateResultWith: result
 	composer move: #result onTheRightOf: #source.
 	composer redrawNamesFor: namedGroups.
 	composer redrawBackgroundsFor: backgroundGroups.
-	composer view canvas focusOnCenterScaled
+	composer view canvas camera focusOnCenterScaled
