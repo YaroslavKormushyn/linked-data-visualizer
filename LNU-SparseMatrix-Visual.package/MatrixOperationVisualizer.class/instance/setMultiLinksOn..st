@@ -1,0 +1,3 @@
+initialization
+setMultiLinksOn: matrixInstance
+self subclassResponsibility 

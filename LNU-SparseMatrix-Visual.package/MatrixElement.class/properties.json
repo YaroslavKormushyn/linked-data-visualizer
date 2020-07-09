@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-SparseMatrix-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"row",
+		"column",
+		"value",
+		"source",
+		"next"
+	],
+	"name" : "MatrixElement",
+	"type" : "normal"
+}

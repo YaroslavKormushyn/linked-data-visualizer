@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "YaroslavKormushyn 4/16/2018 11:09",
+	"super" : "SparseMatrixNode",
+	"category" : "LNU-SparseMatrix-Data",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"row",
+		"column",
+		"leftNeighbour",
+		"rightNeighbour"
+	],
+	"name" : "COOSparseMatrixNode",
+	"type" : "normal"
+}

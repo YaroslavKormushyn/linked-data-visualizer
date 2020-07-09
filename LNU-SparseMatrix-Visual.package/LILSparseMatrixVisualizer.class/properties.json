@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MatrixVisualizer",
+	"category" : "LNU-SparseMatrix-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LILSparseMatrixVisualizer",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "YaroslavKormushyn 4/18/2018 11:36",
+	"super" : "Object",
+	"category" : "LNU-SparseMatrix-Data",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rows",
+		"columnNumber",
+		"rowNumber"
+	],
+	"name" : "ArrayOfArrays",
+	"type" : "normal"
+}

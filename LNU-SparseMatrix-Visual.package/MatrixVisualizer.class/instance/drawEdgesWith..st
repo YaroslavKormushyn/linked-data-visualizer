@@ -1,0 +1,3 @@
+private
+drawEdgesWith: elements
+	self subclassResponsibility

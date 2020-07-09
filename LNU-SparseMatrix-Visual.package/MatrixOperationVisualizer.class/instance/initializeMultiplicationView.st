@@ -1,0 +1,4 @@
+initialization
+initializeMultiplicationView
+self subclassResponsibility 
+	

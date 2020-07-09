@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-SparseMatrix-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"source",
+		"elementSize"
+	],
+	"name" : "MatrixVisualizer",
+	"type" : "normal"
+}

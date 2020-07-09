@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "MatrixOperationVisualizer",
+	"category" : "LNU-SparseMatrix-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentLeftRow",
+		"currentRightColumn",
+		"leftMatrixMarker",
+		"leftSavedMatrixMarker",
+		"rightMatrixMarker",
+		"nowProcessingElementIndex",
+		"leftMarkerElement",
+		"rightMarkerElement"
+	],
+	"name" : "LILSparseMatrixOperationVisualizer",
+	"type" : "normal"
+}

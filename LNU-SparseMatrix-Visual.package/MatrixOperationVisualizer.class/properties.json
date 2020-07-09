@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "LNU-SparseMatrix-Visual-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectColor",
+		"leftMatrix",
+		"rightMatrix",
+		"resultMatrix",
+		"process",
+		"composer",
+		"namedGroups",
+		"backgroundGroups",
+		"elementSize",
+		"metaLinks",
+		"delay",
+		"semaphore"
+	],
+	"name" : "MatrixOperationVisualizer",
+	"type" : "normal"
+}

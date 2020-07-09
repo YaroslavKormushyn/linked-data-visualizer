@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAttachPoint",
+	"category" : "LNU-Roassal-Extensions-AttachPoint",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTVerticalTopToBottomAttachPoint",
+	"type" : "normal"
+}

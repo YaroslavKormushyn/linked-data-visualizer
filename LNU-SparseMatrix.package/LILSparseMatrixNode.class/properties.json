@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "YaroslavKormushyn 4/18/2018 11:05",
+	"super" : "SparseMatrixNode",
+	"category" : "LNU-SparseMatrix-Data",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"column"
+	],
+	"name" : "LILSparseMatrixNode",
+	"type" : "normal"
+}

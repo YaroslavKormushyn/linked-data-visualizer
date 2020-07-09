@@ -1,0 +1,3 @@
+initialization
+setPositionsForMultiplication
+	self subclassResponsibility 

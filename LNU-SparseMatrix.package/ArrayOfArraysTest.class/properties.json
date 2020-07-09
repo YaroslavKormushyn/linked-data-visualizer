@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "LNU-SparseMatrix-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rows",
+		"columns",
+		"factor",
+		"empty",
+		"twoByTwo",
+		"full",
+		"left",
+		"right",
+		"leftPlusRight",
+		"leftByRight"
+	],
+	"name" : "ArrayOfArraysTest",
+	"type" : "normal"
+}

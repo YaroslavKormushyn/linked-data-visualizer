@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "LNU-SparseMatrix-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"empty",
+		"left",
+		"right",
+		"full",
+		"rows",
+		"columns",
+		"factor",
+		"leftPlusRight",
+		"leftByRight",
+		"twoByTwo"
+	],
+	"name" : "COOSparseMatrixTest",
+	"type" : "normal"
+}

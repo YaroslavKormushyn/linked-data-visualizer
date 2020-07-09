@@ -1,0 +1,3 @@
+convenience
+selectModels: modelCollection
+	composer selectModels: modelCollection
