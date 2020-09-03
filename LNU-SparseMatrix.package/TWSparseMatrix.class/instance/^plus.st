@@ -3,7 +3,7 @@ arithmetic
 	"Addition of matrices of the same type"
 
 	| result rowNumbers colNumbers colLast leftRowMarker rightRowMarker tail |
-	(rowNumber = aMatrix rowsNumber
+	(rowNumber = aMatrix rowNumber
 		and: [ columnNumber = aMatrix columnNumber ])
 		ifFalse: [ Error signal: 'Matrices must be of same size.' ].
 	result := self class rows: rowNumber columns: columnNumber.

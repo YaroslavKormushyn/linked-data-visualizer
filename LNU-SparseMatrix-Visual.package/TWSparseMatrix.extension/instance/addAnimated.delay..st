@@ -50,7 +50,7 @@ addAnimated: aMatrix delay: delay
 				reject: [ :colHead | colHead belowNeighbour = colHead ])
 				collect: [ :colHead | colHead column ]).
 	"gray out rows which are empty"
-	((1 to: self rowsNumber) copyWithoutAll: rowNumbers)
+	((1 to: self rowNumber) copyWithoutAll: rowNumbers)
 		do: [ :rowIndex | 
 			| backgroundBoxLeft backgroundBoxRight outterGap |
 			outterGap := 5 @ 5.
@@ -86,7 +86,7 @@ addAnimated: aMatrix delay: delay
 				ifTrue: [ vis composer groupToExisting: #shade ]
 				ifFalse: [ vis group: #shade ] ].
 	"gray out empty columns"
-	((1 to: self columnsNumber) copyWithoutAll: colNumbers)
+	((1 to: self columnNumber) copyWithoutAll: colNumbers)
 		do: [ :rowIndex | 
 			| backgroundBoxLeft backgroundBoxRight outterGap |
 			outterGap := 5 @ 5.
